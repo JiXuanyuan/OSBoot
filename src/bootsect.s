@@ -1,4 +1,4 @@
-org 0x7c00
+;org 0x7c00
 ;global _start
 
 [section .data]
@@ -6,8 +6,10 @@ org 0x7c00
 
 [section .text]
 
+	jmp 0x07c0:_start
+
 _start:
-	mov ax, 0
+	mov ax, cs
 	mov ss, ax
 	mov sp, _stack_len
 	mov ds, ax
