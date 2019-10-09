@@ -9,7 +9,7 @@ org 0x7c00
 _start:
 	mov ax, 0
 	mov ss, ax
-	mov sp, _stack_len
+	mov sp, _stack_top
 	mov ds, ax
 	mov es, ax
 
@@ -35,7 +35,7 @@ _msg:
 
 _stack:
 	times 128 db 0
-	_stack_len equ ($ - _stack)
+	_stack_top equ ($)
 
 _blank:
 	times 0x1fe-($-$$) db 0
