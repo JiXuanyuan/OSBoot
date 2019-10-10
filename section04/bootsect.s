@@ -1,7 +1,7 @@
 ;global _start
 
 BOOTSEG equ (0x07c0)		;// bootsect的原始地址（段地址，下同）
-BOOT_SIZE equ (0x200)		;//bootsect模块的长度
+BOOT_SIZE equ (0x200)		;// bootsect模块的长度
 INITSEG equ (0x9000)		;// bootsect移动后的地址
 SETUPSEG equ (0x9020)		;// setup的加载地址
 SYSSEG equ (0x1000)		;// system的加载地址
@@ -96,7 +96,7 @@ _print0_exit:
 	ret
 
 ;//========================================================================
-;// 将这个bootsect模块复制到INITSEG:0处
+;// 将这个bootsect复制到INITSEG:0处
 _func_copy_root:
 	push es
 
